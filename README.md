@@ -7,6 +7,7 @@ A machine learning project to predict real estate prices based on various featur
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
+- [Repository Contents](#repository-contents)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -40,23 +41,22 @@ A machine learning project to predict real estate prices based on various featur
 - Model evaluation
 - Price prediction
 
-## Contributing
+## Repository Contents
 
-1. Fork the repository.
-2. Create a new branch:
-    ```sh
-    git checkout -b feature/your-feature-name
-    ```
-3. Make your changes and commit them:
-    ```sh
-    git commit -m 'Add some feature'
-    ```
-4. Push to the branch:
-    ```sh
-    git push origin feature/your-feature-name
-    ```
-5. Open a pull request.
+| File/Folder                  | Description                                      |
+|------------------------------|--------------------------------------------------|
+| `Real Estate Price Prediction.ipynb` | Jupyter Notebook for the project.               |
+| `Real Estate Price Prediction.py`   | Python script for the project.                  |
+| `columns.json`               | JSON file containing column names.               |
+| `requirements.txt`           | List of dependencies required for the project.   |
+| `README.md`                  | This README file.                                |
 
-## License
+## Code Excerpt
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```python
+import json
+columns={
+    'data_columns':[col.lower() for col in x.columns]
+}
+with open ('columns.json','w') as f:
+    f.write(json.dumps(columns))
