@@ -1,6 +1,24 @@
 # Real Estate Price Predictor
 
-This project is a full-stack machine learning web application for predicting real estate prices in Bangalore, India. It combines a trained ML regression model, a Flask REST API backend, and a modern Angular + Tailwind CSS frontend for a seamless, interactive user experience.
+---
+
+## 🛠️ Tech Stack & Tools
+
+| Tool / Technology         | Icon         | Description                                                                 |
+|--------------------------|--------------|-----------------------------------------------------------------------------|
+| Python                   | 🐍           | Core language for ML model and backend API                                  |
+| scikit-learn             | 📊           | Machine learning library for model training and prediction                   |
+| pandas                   | 🐼           | Data manipulation and analysis for ML pipeline                              |
+| Flask                    | 🌐           | Lightweight Python web framework for REST API backend                       |
+| flask-cors               | 🔗           | Handles CORS for secure frontend-backend communication                      |
+| Angular                  | ⚡           | Modern frontend framework for building responsive UI                        |
+| Tailwind CSS             | 🎨           | Utility-first CSS framework for rapid, modern, and responsive styling        |
+| TypeScript               | 📝           | Strongly-typed language for robust Angular frontend                         |
+| Docker                   | 🐳           | Containerization for consistent deployment and development                  |
+| Vercel                   | ▲            | Frontend hosting for fast, global static site delivery                      |
+| Render                   | ☁️           | Backend hosting for scalable API deployment                                 |
+| Git                      | 🔧           | Version control for source code management                                  |
+| Jupyter Notebook         | 📒           | Interactive ML experimentation and data exploration                         |
 
 ---
 
