@@ -14,7 +14,7 @@ export interface PricePrediction {
   providedIn: 'root'
 })
 export class PricePredictionService {
-  private apiUrl = 'http://localhost:5000'; // Change this to your deployed backend URL
+  private apiUrl = 'https://realestatepriceprediction-v2.onrender.com'; // Change this to your deployed backend URL
 
   constructor(private http: HttpClient) { }
 
