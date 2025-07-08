@@ -1,24 +1,21 @@
 # Real Estate Price Predictor
 
----
+> **Full-Stack ML Web App for Bangalore Real Estate Price Prediction**
 
 ## 🛠️ Tech Stack & Tools
 
-| Tool / Technology         | Icon         | Description                                                                 |
-|--------------------------|--------------|-----------------------------------------------------------------------------|
-| Python                   | 🐍           | Core language for ML model and backend API                                  |
-| scikit-learn             | 📊           | Machine learning library for model training and prediction                   |
-| pandas                   | 🐼           | Data manipulation and analysis for ML pipeline                              |
-| Flask                    | 🌐           | Lightweight Python web framework for REST API backend                       |
-| flask-cors               | 🔗           | Handles CORS for secure frontend-backend communication                      |
-| Angular                  | ⚡           | Modern frontend framework for building responsive UI                        |
-| Tailwind CSS             | 🎨           | Utility-first CSS framework for rapid, modern, and responsive styling        |
-| TypeScript               | 📝           | Strongly-typed language for robust Angular frontend                         |
-| Docker                   | 🐳           | Containerization for consistent deployment and development                  |
-| Vercel                   | ▲            | Frontend hosting for fast, global static site delivery                      |
-| Render                   | ☁️           | Backend hosting for scalable API deployment                                 |
-| Git                      | 🔧           | Version control for source code management                                  |
-| Jupyter Notebook         | 📒           | Interactive ML experimentation and data exploration                         |
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
+[![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+[![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)](https://angular.io/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
+[![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://render.com/)
+[![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com/)
+[![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)](https://jupyter.org/)
 
 ---
 
