@@ -1,0 +1,128 @@
+<div class="min-h-screen bg-gradient-to-br from-blue-200 via-indigo-100 to-purple-200 flex items-center justify-center py-8 px-2">
+  <div class="w-full max-w-2xl mx-auto">
+    <!-- Header -->
+    <div class="text-center mb-10">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-3 drop-shadow-lg tracking-tight">Bangalore Home Price Prediction</h1>
+      <p class="text-lg text-gray-600 font-medium">Get accurate price estimates for properties in Bangalore</p>
+    </div>
+
+    <!-- Main Form Card -->
+    <div class="backdrop-blur-md bg-white/70 rounded-3xl shadow-2xl p-8 md:p-12 space-y-8 border border-white/40">
+      <!-- Area Input -->
+      <div>
+        <label for="sqft" class="block text-base font-semibold text-gray-700 mb-2">
+          Area (Square Feet)
+        </label>
+        <input
+          type="number"
+          id="sqft"
+          [(ngModel)]="totalSqft"
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent text-lg bg-white/80 shadow-sm"
+          placeholder="Enter area in sq ft"
+        >
+      </div>
+
+      <!-- BHK Selection -->
+      <div>
+        <label class="block text-base font-semibold text-gray-700 mb-2">BHK</label>
+        <div class="flex flex-wrap gap-3">
+          <button
+            *ngFor="let bhk of [1,2,3,4,5]"
+            type="button"
+            (click)="onBhkChange(bhk)"
+            [class]="this.bhk === bhk ? 
+              'bg-blue-600 text-white border-blue-600 scale-110 shadow-lg' : 
+              'bg-gray-100 text-gray-700 border-gray-300 hover:bg-blue-100'"
+            class="px-5 py-2 border rounded-lg text-base font-semibold transition-all duration-150"
+          >
+            {{ bhk }}
+          </button>
+        </div>
+      </div>
+
+      <!-- Bathrooms Selection -->
+      <div>
+        <label class="block text-base font-semibold text-gray-700 mb-2">Bathrooms</label>
+        <div class="flex flex-wrap gap-3">
+          <button
+            *ngFor="let bath of [1,2,3,4,5]"
+            type="button"
+            (click)="onBathChange(bath)"
+            [class]="this.bath === bath ? 
+              'bg-blue-600 text-white border-blue-600 scale-110 shadow-lg' : 
+              'bg-gray-100 text-gray-700 border-gray-300 hover:bg-blue-100'"
+            class="px-5 py-2 border rounded-lg text-base font-semibold transition-all duration-150"
+          >
+            {{ bath }}
+          </button>
+        </div>
+      </div>
+
+      <!-- Location Selection -->
+      <div>
+        <label for="location" class="block text-base font-semibold text-gray-700 mb-2">
+          Location
+        </label>
+        <select
+          id="location"
+          [(ngModel)]="selectedLocation"
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent text-lg bg-white/80 shadow-sm"
+        >
+          <option value="" disabled>Choose a Location</option>
+          <option *ngFor="let location of locations" [value]="location">
+            {{ location }}
+          </option>
+        </select>
+      </div>
+
+      <!-- Error Message -->
+      <div *ngIf="error" class="bg-red-100 border border-red-300 rounded-lg p-3">
+        <p class="text-base text-red-700 font-medium">{{ error }}</p>
+      </div>
+
+      <!-- Predict Button -->
+      <button
+        (click)="predictPrice()"
+        [disabled]="loading"
+        class="w-full bg-gradient-to-r from-blue-600 to-indigo-500 text-white py-4 px-4 rounded-xl font-bold text-lg shadow-lg hover:from-blue-700 hover:to-indigo-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-150"
+      >
+        <span *ngIf="!loading">Estimate Price</span>
+        <span *ngIf="loading" class="flex items-center justify-center">
+          <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+          Predicting...
+        </span>
+      </button>
+
+      <!-- Result -->
+      <div *ngIf="estimatedPrice !== null" class="bg-green-100 border border-green-300 rounded-xl p-6 text-center shadow-md animate-fade-in">
+        <h3 class="text-xl font-bold text-green-800 mb-2">Estimated Price</h3>
+        <p class="text-3xl font-extrabold text-green-600">{{ estimatedPrice }} Lakh</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="text-center mt-10">
+      <p class="text-base text-gray-500 font-medium">
+        Powered by <span class="font-bold text-blue-600">Machine Learning</span> • <span class="font-bold text-indigo-600">Bangalore Real Estate</span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<style>
+  @media (max-width: 640px) {
+    .max-w-2xl {
+      max-width: 98vw !important;
+    }
+  }
+  .animate-fade-in {
+    animation: fadeIn 0.7s;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style> 
